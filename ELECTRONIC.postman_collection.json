@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "56e3802f-6a9a-485d-8dfe-d75599ced53f",
+		"name": "ELECTRONIC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"roberto\",\r\n    \"email\": \"robertoborjasfreelance@gmail.com\",\r\n    \"password\": \"some13Pasword!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"robertoborjasfreelance@gmail.com\",\r\n    \"password\": \"some13Pasword!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/authorization",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/active",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/61018b4b07bbfd0c30f5122c/active",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"61018b4b07bbfd0c30f5122c",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/authorization",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/61018b4b07bbfd0c30f5122c",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"61018b4b07bbfd0c30f5122c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"some14Pasword!\",\r\n    \"email\": \"borjasbricenoroberto@gmail.com\",\r\n    \"username\": \"carlos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/61018b4b07bbfd0c30f5122c",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"61018b4b07bbfd0c30f5122c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/61018b4b07bbfd0c30f5122c",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"61018b4b07bbfd0c30f5122c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Messages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/messages/send",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"messages",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjEwMThiNGIwN2JiZmQwYzMwZjUxMjJjIiwidXNlcm5hbWUiOiJyb2JlcnRvIiwiZW1haWwiOiJyb2JlcnRvYm9yamFzZnJlZWxhbmNlQGdtYWlsLmNvbSIsImlhdCI6MTYyNzQ5MTE1NCwiZXhwIjoxNjI4MDk1OTU0fQ.JyRjfBlY8KLEw_rOJLFs0jbRgsgh48Or4WUbJHDkhYA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:4000"
+		}
+	]
+}
